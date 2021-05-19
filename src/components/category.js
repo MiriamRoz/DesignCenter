@@ -5,7 +5,7 @@ import '../App.css';
 import IconButton from '@material-ui/core/IconButton';
 // import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCartIcon';
 import Points from './point.js';
-
+import Object from './Object';
 
 function Category() {
 
@@ -24,7 +24,8 @@ function Category() {
             <br />
             <br />
             <Button className="button" variant="contained" color="primary">לקטלוג המלא</Button>
-            <Points />
+            {/* <Points /> */}
+            <Object/>
             {/* <IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon /></IconButton>  */}
 
         </div>
