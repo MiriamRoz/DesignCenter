@@ -2,9 +2,8 @@ import React from 'react';
 import './App.css';
 import HomePage from './components/homePage';
 import Category from './components/category';
-import './components/points.css';
-import './components/point.html';
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import Order from './components/order';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
     <Router>
       <div >
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <HomePage />
           </Route>
           <Route path="/category">
