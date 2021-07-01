@@ -1,9 +1,9 @@
 import React from 'react';
-
-// import "./App.css";
+import connect from 'react-redux/lib/connect/connect';
+import {saveFurniture} from "./actions"
 import { useEffect } from "react";
 
-function Login() {
+function giveData() {
   
   useEffect(() => {
     fetch("http://localhost:3000/login?user=user1")
@@ -16,4 +16,4 @@ function Login() {
   return <div className="App">LOGIN</div>;
 }
 
-export default Login;
+export default connect(null, {saveFurniture})(giveData)
