@@ -4,6 +4,7 @@ import HomePage from './components/homePage';
 import Category from './components/category';
 import Order from './components/order';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Login from './components/login';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <HomePage />
+            {/* <Login/> */}
           </Route>
           <Route path="/category">
             <Category />

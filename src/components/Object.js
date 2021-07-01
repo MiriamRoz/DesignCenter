@@ -6,8 +6,8 @@ const Object=()=> {
     return (
       <div>
         <OBJModel
-        width="200" height="200"
-        position={{ x: 0, y: -100, z: 0 }}
+        width="300" height="305"
+        position={{ x:20, y:-30, z:-150 }}
         src='3D/Uto Bench-OBJ.obj'
         onLoad={() => {
           //...

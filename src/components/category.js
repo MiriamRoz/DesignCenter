@@ -9,23 +9,22 @@ import Object from './Object';
 
 function Category() {
 
+    function sort(value) {
+
+    }
+    function getAll(){
+
+        fetch("http://localhost:3000/getAll").then((res)=>{
+        console.log("res,", res)})
+    }
+
     return (
         <div>
-            <Button variant="contained" color="primary"> חדר ילדים</Button>
-            <br />
-            <br />
-            <Button variant="contained" color="primary"> חדר שינה</Button>
-            <br />
-            <br />
-            <Button variant="contained" color="primary"> סלון</Button>
-            <br />
-            <br />
-            <Button variant="contained" color="primary"> חצר</Button>
-            <br />
-            <br />
-            <Button className="button" variant="contained" color="primary">לקטלוג המלא</Button>
+           {/* {name: "חדר ילדים", sortId: 1}, {name:"חדר שינה", sortId:2} ,{name: "סלון", sortId: 3}, {name:"חצר", sortId:4} */}
+            {[{name: "חדר ילדים", sortId: 1}, {name:"חדר שינה", sortId:2} ,{name: "סלון", sortId: 3}, {name:"חצר", sortId:4}].map((room)=> <Button variant="contained" style={{margin: 30}}  color="primary" onClick={()=>sort(room.sortId)}> {room.name}</Button>)}
+            <Button className="button" variant="contained" color="primary">לקטלוג המלא</Button> 
             {/* <Points /> */}
-            <Object/>
+            <Object />
             {/* <IconButton color="primary" aria-label="add to shopping cart"><AddShoppingCartIcon /></IconButton>  */}
 
         </div>
